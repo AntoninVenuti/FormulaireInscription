@@ -1,0 +1,5 @@
+<button (click)="showClient()">Liste clients</button>
+<label>Client name:
+    <input #clientLastName />
+</label>
+<button (click)="add(clientLastName.value); clientLastName.value=''">Ajouter un client</button>

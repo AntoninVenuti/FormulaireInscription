@@ -1,0 +1,58 @@
+<div class="row custom-row">
+  <div class= "col-sm-5 custom-container jumbotron">
+       
+    <form (ngSubmit)="onSubmit()" class="form-horizontal"
+    #signupForm = "ngForm">
+
+            <!--- Email --->
+            <div class="form-group">
+              <label for="inputEmail">Email</label>
+              <input type="text"
+                [(ngModel)]="model.email"
+                id="inputEmail"
+                name="email"
+                class="form-control"
+                placeholder="Email"
+                minlength="3"
+                #clientEmail
+                required>
+            </div>
+            
+            <!--- Prénom --->
+              <div class="form-group" >
+                <label for="firstName">Prénom</label>
+                <input type="text"
+                [(ngModel)]="model.lastName"
+                 name="firstName"
+                 class="form-control"
+                 placeholder="First Name"
+                 minlength="3"
+                 #clientFirstName 
+                 required >
+              </div>
+
+            <!--- Nom --->
+              <div class="form-group">
+                <label for="lastName">Nom</label>
+                <input type="text"
+                [(ngModel)]="model.firstName"
+                  name="lastName"
+                  class="form-control"
+                  placeholder="Last Name"
+                  minlength="3"
+                  #clientLastName
+                  required>
+                  <br>
+              </div>
+            
+           <!--- Boutons --->
+            <div class="form-group">
+                <button type="reset" class="btn btn-default">Effacer</button>
+                <button type="submit" class="btn btn-succes" 
+                [disabled]="!signupForm.form.valid">Envoyer</button>
+                <button (click)="add()">Ajouter un client</button>
+            </div>
+
+    </form>
+  </div>
+</div>

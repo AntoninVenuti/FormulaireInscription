@@ -1,0 +1,13 @@
+[
+    {
+        "email": "antonin.vnt@hotmail.com",
+        "lastName": "Venuti",
+        "firstName": "Antonin"
+    },
+
+    {
+        "email": "test.test@orange.fr",
+        "lastName": "Dart",
+        "firstName": "Hervé"
+    }
+]
